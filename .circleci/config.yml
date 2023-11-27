@@ -1,20 +1,20 @@
 version: 2.1
-orbs:
-  node: circleci/node@latest
 
 jobs:
   build_and_test:
-    executor: node/default
+    docker:
+      - image: cimg/node:14.17.1
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: yarn
       - run:
-          command: yarn test
+          name: Install Node.js packages
+          command: yarn install --frozen-lockfile
+      - run:
           name: Run tests
+          command: yarn test
       - run:
-          command: yarn build
           name: Build app
+          command: yarn build
       - persist_to_workspace:
           root: ~/project
           paths:
@@ -22,7 +22,7 @@ jobs:
 
   deploy:
     docker:
-      - image: circleci/node:20
+      - image: cimg/node:14.17.1
     steps:
       - attach_workspace:
           at: ~/project
@@ -41,4 +41,3 @@ workflows:
       - deploy:
           requires:
             - build_and_test
-         
