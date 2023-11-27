@@ -22,7 +22,7 @@ jobs:
 
   deploy:
     docker:
-      - image: cimg/node:
+      - image: cimg/node:18.16.0
     steps:
       - attach_workspace:
           at: ~/project
