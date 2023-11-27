@@ -37,10 +37,10 @@ workflows:
   version: 2
   test_my_app:
     jobs:
-      - build_and_test
+      - build
       - deploy:
           requires:
-            - build_and_test
+            - build
           filters:
             branches:
               only: main
