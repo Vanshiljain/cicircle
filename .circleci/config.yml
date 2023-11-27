@@ -6,9 +6,17 @@ jobs:
       - image: node:20
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - yarn-v1-{{ checksum "yarn.lock" }}
+            - yarn-v1-
       - run:
           name: Install Dependencies
           command: yarn install
+      - save_cache:
+          key: yarn-v1-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
       - run:
           name: Run tests
           command: yarn test
