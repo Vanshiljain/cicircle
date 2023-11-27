@@ -3,22 +3,16 @@ version: 2.1
 jobs:
   build_and_test:
     docker:
-      - image: cimg/node:14.17.1
+      - image: circleci/node:14.17.1
 
     steps:
       - checkout
       - run:
-          name: Install nvm
+          name: Install Node.js using yarn
           command: |
-            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-            export NVM_DIR="$HOME/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-      - run:
-          name: Use the latest version of Node.js
-          command: |
-            nvm install node
-            nvm use node
+            yarn global add n
+            export PATH="$(yarn global bin):$PATH"
+            n latest
       - run:
           name: Install Dependencies and Build
           command: |
@@ -32,7 +26,8 @@ jobs:
 
   deploy:
     docker:
-      - image: cimg/node:14.17.1
+      - image: circleci/node:14.17.1
+
     steps:
       - attach_workspace:
           at: ~/project
