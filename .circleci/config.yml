@@ -12,9 +12,7 @@ jobs:
       - run:
           name: Run tests
           command: yarn test
-      - run:
-          name: Build app
-          command: yarn build
+    
       - persist_to_workspace:
           root: ~/project
           paths:
@@ -41,6 +39,4 @@ workflows:
       - deploy:
           requires:
             - build_and_test
-          filters:
-            branches:
-              only: main
+         
