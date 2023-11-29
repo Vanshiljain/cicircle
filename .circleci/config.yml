@@ -1,0 +1,44 @@
+version: 2.1
+
+jobs:
+  build_and_test:
+    docker:
+      - image: node:20
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: yarn install
+      - run:
+          name: Run tests
+          command: yarn test
+   
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - .
+
+  deploy:
+    docker:
+      - image: node:20
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Deploy to Render
+          command: |
+            # Add Render deployment commands here
+            # Example:
+            curl -H "Authorization: Bearer rnd_1hlhEHqdZugHinjzI86HRE06RwlA" -X POST https://api.render.com/v1/services/my-service/deploy
+
+workflows:
+  version: 2
+  test_my_app:
+    jobs:
+      - build_and_test
+      - deploy:
+          requires:
+            - build_and_test
+          filters:
+            branches:
+              only: main
