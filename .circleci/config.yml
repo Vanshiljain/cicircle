@@ -12,7 +12,6 @@ jobs:
       - run:
           name: Run tests
           command: yarn test
-    
       - persist_to_workspace:
           root: ~/project
           paths:
@@ -32,11 +31,11 @@ jobs:
             curl -H "Authorization: Bearer rnd_1hlhEHqdZugHinjzI86HRE06RwlA" -X POST https://api.render.com/v1/services/my-service/deploy
 
 workflows:
-  version: 2
+  version: 2.1
   test_my_app:
     jobs:
       - build_and_test
       - deploy:
           requires:
             - build_and_test
-         
+          
