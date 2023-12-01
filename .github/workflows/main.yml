@@ -31,7 +31,7 @@ jobs:
       with:
         name: build-logs
         path: |
-          C:/Users/LENOVO/Desktop/circleci/circleci/logs
+          C:/Users/LENOVO/Desktop/cicircle/logs
           
 # Add a new workflow to fetch the logs
 jobs:
