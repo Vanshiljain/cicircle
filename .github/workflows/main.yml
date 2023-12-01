@@ -25,7 +25,7 @@ jobs:
       run: |
         npm run build
 
-    # Add this step to upload logs as an artifact
+    # Add this step to upload logs as an artifactass
     - name: Upload Logs
       uses: actions/upload-artifact@v2
       with:
