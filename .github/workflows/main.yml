@@ -1,4 +1,4 @@
-name: CI/CDn
+name: CI/CD
 z
 on:
   push:
