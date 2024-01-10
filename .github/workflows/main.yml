@@ -1,5 +1,5 @@
 xname: CI/szs
-z
+
 on:
   push:
     branches:
