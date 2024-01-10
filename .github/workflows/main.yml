@@ -1,4 +1,4 @@
-name: CI/
+name: CI/s
 z
 on:
   push:
