@@ -1,7 +1,7 @@
 xcxname: CI/szs
 
 on:zz
-  push:
+  push:dc
     branches:
       - main
 
