@@ -1,6 +1,6 @@
 xcxname: CI/szs
 
-on:
+on:zz
   push:
     branches:
       - main
