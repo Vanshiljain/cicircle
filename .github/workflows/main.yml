@@ -1,4 +1,4 @@
-cxname: CI/szs
+xcxname: CI/szs
 
 on:
   push:
