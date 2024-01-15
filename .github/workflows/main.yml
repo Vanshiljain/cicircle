@@ -3,7 +3,7 @@ d
 on:zz
   push:dc
     branches:
-      - main
+      - main[;
 
 jobs:
   build:
