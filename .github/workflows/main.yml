@@ -22,7 +22,7 @@ jobs:
         npm test
 
     - name: Build
-      run: |
+      run: |;
         npm run build
 
     # Add this step to upload logs as an artifactass
