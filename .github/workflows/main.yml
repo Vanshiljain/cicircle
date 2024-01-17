@@ -7,7 +7,7 @@ on:zz
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latesta
 
     steps:
     - name: Checkout code
