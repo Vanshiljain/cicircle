@@ -3,8 +3,7 @@ sassdss cccxx==cccxzcdcddczcxfcdddxcxcxname: CI/szssdzxx c dc
 on:zz
   push:dcx
     branchc
-      - main[;
-
+      - main[
 jobs:
   build:
     runs-on: ubuntu-latesta
