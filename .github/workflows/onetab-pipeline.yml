@@ -3,7 +3,7 @@ name: Nihar API
 on:
   push:
     branches:
-      - main
+      - final-check
       
 jobs:
   build:
