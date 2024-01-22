@@ -2,7 +2,7 @@ xsddxsssx
 name: Nihar AP oixz
 
 on:
-  push:
+  push:d
     branches:
       - final-check
       
