@@ -2,7 +2,7 @@
 name: Nihar AP oixsas
  
 on:dsx
-  push:ds   
+  push:ds    
     branches: 
       - final-check
        
