@@ -1,6 +1,6 @@
  module.exports = { 
     
-    "prettier/prettier": [ 
+    "prettier/prettier": [  
       "error",      
       {     
         "singleQuote": true,  
