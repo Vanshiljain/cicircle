@@ -7,7 +7,7 @@ on:dsx
     branches:         
       - final-check      
         
-jobs: 
+jobs:  
   build:n
     runs-on: ubuntu-latest  
 
