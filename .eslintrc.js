@@ -4,7 +4,7 @@
       "error",      
       {     
         "singleQuote": true,
-        "parser": "flow" 
+        "parser": "flow"  
       }
     ],
   parser: '@typescript-eslint/parser',
