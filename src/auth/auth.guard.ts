@@ -11,5 +11,5 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
     req.token = token;
     return req   
   }//hell0 
-}
+} 
  
