@@ -5,7 +5,7 @@
       {     
         "singleQuote": true,   
         "parser": "flow"   
-      }
+      } 
     ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
