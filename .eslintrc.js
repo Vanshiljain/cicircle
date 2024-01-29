@@ -3,7 +3,7 @@
     "prettier/prettier": [  
       "error",      
       {     
-        "singleQuote": true,  
+        "singleQuote": true,   
         "parser": "flow"   
       }
     ],
