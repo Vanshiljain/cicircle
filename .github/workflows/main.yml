@@ -8,7 +8,7 @@ on:dsx
       - final-check
        
 jobs:
-  build:
+  build:n
     runs-on: ubuntu-latest
 
     steps:
