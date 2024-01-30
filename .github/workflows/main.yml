@@ -4,7 +4,7 @@ name: Nihar AP oixsas
                     
 on:dsx            
   push:ds              
-    branches:            
+    branches:             
       - final-check          
          
 jobs:  
