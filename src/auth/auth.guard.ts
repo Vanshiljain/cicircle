@@ -9,7 +9,7 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
     const { req } = ctx.getContext();                
     const token = req.headers.authorization?.replace ('Bearer ',  '');               
     req.token = token;      
-    return req       
+    return req        
   }//hell0 
 } 
  
