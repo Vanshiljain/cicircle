@@ -1,0 +1,38 @@
+
+name: Build React Application 
+repoFullName: Vanshiljain-Vanshiljain/cicircle
+on:
+  push:
+    branches:
+      - main
+  
+jobs:
+  run-lint:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.16.0]
+
+    steps:
+      - uses: actions/checkout@v3
+        name: Setup jobs
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        name: Setup environment  
+        with:
+          node-version:
+            ${{ matrix.node-version }}
+           
+      - name: Install dependencies
+        run: git pull origin main
+             npm install
+             npm install -g firebase-tools
+        
+      - name: Building
+        run: npm run build
+      
+      - name: Deployment
+        run: firebase deploy --token '1//0gULYX7V6H6X2CgYIARAAGBASNwF-L9IrI93CK2X2lioDI82felcXrgqG7TPqLsYMtH3M6QZ5y9sT_GwdHrc-DSQCFEPiNEoH51Y'
