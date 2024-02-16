@@ -3,7 +3,7 @@ repoFullName: Vanshiljain-Vanshiljain/cicircle
 on:
   push:
     branches:
-      - github-webhook
+      - main
        
 jobs:  
   run-lint:  
