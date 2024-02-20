@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
-  run-deploy:
+  run-deploy 
     runs-on: ubuntu-latest 
  
     strategy:
