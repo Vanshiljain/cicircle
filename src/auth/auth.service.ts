@@ -11,7 +11,7 @@ export class AuthService {
     private readonly userService: UserService,
     private readonly jwtService: JwtService,
     private readonly tokenService: TokenService,
-  ) { }
+  ) { } 
 
   async login(email: string, password: string): Promise<string> {
     const user = await this.userService.findOne(email);
